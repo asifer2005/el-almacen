@@ -85,6 +85,23 @@ h2{font-family:Georgia,'Times New Roman',serif;font-size:2rem;margin:0 0 12px}
 .gallery img:hover{transform:scale(1.02)}
 .gallery img.wide{grid-column:span 2;height:320px}
 
+/* ── Reseñas / prueba social ── */
+.reviews-head{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:26px}
+.rating-badge{display:inline-flex;align-items:center;gap:12px;padding:14px 22px;border:1px solid rgba(200,115,31,.4);border-radius:18px;background:rgba(200,115,31,.08);box-shadow:var(--shadow)}
+.rating-badge .score{font-family:Georgia,serif;font-size:2.4rem;font-weight:700;color:var(--accent2);line-height:1}
+.rating-badge .stars{color:var(--accent2);font-size:1.05rem;letter-spacing:2px}
+.rating-badge .meta{font-size:.82rem;color:var(--muted);line-height:1.4}
+.rating-badge .meta strong{color:var(--text);font-weight:700}
+.reviews-link{color:var(--accent2);font-size:.9rem;display:inline-flex;align-items:center;gap:6px}
+.reviews-link:hover{color:var(--accent)}
+.review-card{background:linear-gradient(180deg,rgba(30,18,9,.9),rgba(22,13,6,.8));border:1px solid rgba(61,30,10,.8);border-radius:18px;padding:24px 22px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+.review-card .qstars{color:var(--accent2);font-size:.95rem;letter-spacing:2px;margin-bottom:12px}
+.review-card blockquote{margin:0 0 16px;font-family:Georgia,serif;font-style:italic;font-size:1.02rem;line-height:1.7;color:var(--text)}
+.review-card .author{margin-top:auto;display:flex;align-items:center;gap:11px}
+.review-card .avatar{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--accent2),var(--accent));color:#1a0a02;font-weight:800;font-size:1rem;flex-shrink:0}
+.review-card .author-name{font-weight:700;font-size:.92rem;color:var(--text)}
+.review-card .author-src{font-size:.78rem;color:var(--muted)}
+
 /* ── FAQ ── */
 .faq details{background:rgba(30,18,9,.74);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin-bottom:10px}
 .faq summary{cursor:pointer;font-weight:700} .faq p{color:var(--muted);margin:10px 0 0}
@@ -136,6 +153,7 @@ footer{padding:30px 0 40px;color:var(--muted)}
   "telephone":"+34 984 182575",
   "servesCuisine":["Cocina casera","Asturiana"],
   "priceRange":"€-€€",
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","bestRating":"5","ratingCount":"738"},
   "sameAs":["https://www.instagram.com/elalmacengijon/"],
   "openingHoursSpecification":[
     {"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Tuesday","Wednesday"],"opens":"12:30","closes":"16:00"},
@@ -156,6 +174,7 @@ footer{padding:30px 0 40px;color:var(--muted)}
     </div>
     <nav id="mainNav">
       <a href="#sobre">Sobre</a>
+      <a href="#resenas">Reseñas</a>
       <a href="#vinos">Vinos</a>
       <a href="#propuesta">Qué ofrecemos</a>
       <a href="#galeria">Galería</a>
@@ -203,6 +222,60 @@ footer{padding:30px 0 40px;color:var(--muted)}
         <p style="color:var(--muted);line-height:1.75;margin-top:12px;">Vinos de pequeños productores que no encuentras en todos lados, cervezas naturales, destilados seleccionados de todo el mundo y una cocina directa y sin trampa.</p>
         <div style="margin-top:24px;padding:18px;border:1px solid rgba(200,115,31,.25);border-radius:14px;background:rgba(200,115,31,.07);">
           <span style="font-family:Georgia,serif;font-size:1.08rem;color:var(--accent2);font-style:italic;">"Comida como la de casa, bebida como la que buscas."</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEÑAS / PRUEBA SOCIAL -->
+  <section id="resenas">
+    <div class="wrap">
+      <span class="kicker">Lo que dice la gente</span>
+      <h2>Casi 5 estrellas, sin pedirlas.</h2>
+      <p class="sub">Cientos de clientes nos puntúan en Google. Estas son algunas opiniones reales.</p>
+      <div class="reviews-head">
+        <div class="rating-badge">
+          <span class="score">4,5</span>
+          <div>
+            <div class="stars">★★★★★</div>
+            <div class="meta"><strong>4,5 / 5</strong> en Google · +700 reseñas</div>
+          </div>
+        </div>
+        <a class="reviews-link" href="https://www.google.com/maps/search/El+Almac%C3%A9n+Calle+Bego%C3%B1a+12+Gij%C3%B3n" target="_blank" rel="noopener">Ver todas las reseñas en Google Maps →</a>
+      </div>
+      <div class="grid-3">
+        <div class="review-card">
+          <div class="qstars">★★★★★</div>
+          <blockquote>"Comida excelente. Hemos ido en dos ocasiones... Magnífica comida y buen ambiente y simpatía."</blockquote>
+          <div class="author">
+            <span class="avatar">J</span>
+            <div>
+              <div class="author-name">Julián S.</div>
+              <div class="author-src">Reseña en TripAdvisor</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="qstars">★★★★★</div>
+          <blockquote>"Relación precio calidad perfecta. Tapeo rico y sin complicaciones de autor... Están en la mejor ubicación de la calle Begoña. Vinos a tono."</blockquote>
+          <div class="author">
+            <span class="avatar">L</span>
+            <div>
+              <div class="author-name">Luis M.</div>
+              <div class="author-src">Reseña en TripAdvisor · Gijón</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="qstars">★★★★★</div>
+          <blockquote>"Fue una sorpresa lo bien que comimos y lo bien que nos atendieron, y el revoltillo de centollo y gambas fue espectacular, igual que los callos."</blockquote>
+          <div class="author">
+            <span class="avatar">M</span>
+            <div>
+              <div class="author-name">mdamare</div>
+              <div class="author-src">Reseña en TripAdvisor · Barcelona</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
