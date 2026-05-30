@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>El Almacén Gijón | Bar desde 1956 · Vinos, Cervezas y Cocina casera</title>
+<meta name="description" content="Bar El Almacén en Calle Begoña 12, Gijón. Vinos de pequeños productores, cervezas naturales, destilados del mundo y cocina casera desde 1956." />
+<link rel="canonical" href="https://elalmacengijon.netlify.app/" />
+<link rel="icon" type="image/webp" href="logo.webp" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="El Almacén Gijón | Bar desde 1956" />
+<meta property="og:description" content="Vinos de pequeños productores, cervezas naturales, destilados del mundo y cocina casera en el corazón de Gijón desde 1956." />
+<meta property="og:image" content="https://elalmacengijon.netlify.app/fachada.webp" />
+<meta name="theme-color" content="#120b06" />
+<style>
+:root{
+  --bg:#120b06;--panel:#1e1209;--text:#f4e8d2;--muted:#c8a47e;
+  --accent:#c8731f;--accent2:#e09540;--line:#3d1e0a;--max:1180px;
+  --shadow:0 18px 50px rgba(0,0,0,.45)
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* ── Header ── */
+header{position:sticky;top:0;z-index:40;background:rgba(18,11,6,.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(61,30,10,.8)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0;flex-wrap:wrap}
+.brand-text .name{font-family:Georgia,'Times New Roman',serif;font-size:1.25rem;font-weight:700;letter-spacing:.16em}
+.brand-text .year{display:block;font-size:.65rem;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-top:2px}
+nav{display:flex;gap:18px;color:var(--muted);font-size:.95rem} nav a:hover{color:var(--accent2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:999px;background:linear-gradient(180deg,var(--accent2),var(--accent));color:#1a0a02;font-weight:800;font-size:.92rem;box-shadow:0 8px 24px rgba(200,115,31,.3)}
+.btn.alt{background:transparent;border:1px solid var(--accent);color:var(--accent2);box-shadow:none}
+
+/* ── Hero ── */
+.hero{position:relative;min-height:94vh;display:flex;align-items:flex-end;overflow:hidden;border-top:none!important;padding:0!important}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(175deg,rgba(18,11,6,.2) 0%,rgba(18,11,6,.65) 50%,rgba(18,11,6,.97) 100%)}
+.hero-inner{position:relative;z-index:2;padding:60px 20px 90px;max-width:700px;margin-right:auto;margin-left:0}
+.est-tag{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border:1px solid rgba(200,115,31,.4);border-radius:999px;background:rgba(200,115,31,.09);color:var(--accent2);font-size:.75rem;letter-spacing:.28em;text-transform:uppercase;margin-bottom:22px}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.8rem,5.5vw,5.2rem);line-height:1.03;margin:0 0 18px}
+.lead{color:var(--muted);font-size:1.06rem;max-width:56ch;line-height:1.7;margin:0 0 28px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.pill{padding:9px 14px;border:1px solid rgba(61,30,10,.9);border-radius:999px;background:rgba(30,18,9,.8);color:var(--muted);font-size:.87rem}
+
+/* ── Sections ── */
+section{padding:52px 0;border-top:1px solid rgba(61,30,10,.5)}
+h2{font-family:Georgia,'Times New Roman',serif;font-size:2rem;margin:0 0 12px}
+.kicker{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:block}
+.sub{margin:0 0 24px;color:var(--muted);max-width:70ch}
+.note{color:var(--muted);font-size:.9rem}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+
+/* ── Cards ── */
+.card{background:linear-gradient(180deg,rgba(30,18,9,.9),rgba(22,13,6,.8));border:1px solid rgba(61,30,10,.8);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.card.pad{padding:24px}
+.card img{width:100%;height:310px;object-fit:cover}
+.card.tall img{height:400px}
+.card h3{margin:0 0 8px;font-size:1.15rem;font-family:Georgia,serif}
+.card p{margin:0;color:var(--muted)}
+
+/* ── Propuesta ── */
+.p-card{background:rgba(30,18,9,.7);border:1px solid rgba(61,30,10,.6);border-radius:18px;padding:26px 20px;text-align:center}
+.p-icon{font-size:2rem;margin-bottom:12px;display:block}
+.p-card h3{font-family:Georgia,serif;font-size:1.05rem;margin:0 0 10px;color:var(--accent2)}
+.p-card p{font-size:.88rem;color:var(--muted);margin:0;line-height:1.6}
+
+/* ── Vinos highlight ── */
+.vinos-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(61,30,10,.8)}
+.vinos-img{position:relative}
+.vinos-img img{width:100%;height:100%;min-height:420px;object-fit:cover}
+.vinos-text{background:linear-gradient(135deg,rgba(30,18,9,.95),rgba(18,11,6,.98));padding:42px 38px;display:flex;flex-direction:column;justify-content:center}
+.vinos-text .kicker{margin-bottom:16px}
+.vinos-text h2{font-size:2.2rem;margin:0 0 16px}
+.vinos-text p{color:var(--muted);line-height:1.72;margin:0 0 14px}
+.vino-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.vino-tag{padding:7px 14px;border:1px solid rgba(200,115,31,.35);border-radius:999px;background:rgba(200,115,31,.08);color:var(--accent2);font-size:.82rem}
+
+/* ── Gallery ── */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gallery img{height:240px;width:100%;object-fit:cover;border-radius:16px;border:1px solid rgba(61,30,10,.7);box-shadow:var(--shadow);transition:transform .35s ease}
+.gallery img:hover{transform:scale(1.02)}
+.gallery img.wide{grid-column:span 2;height:320px}
+
+/* ── FAQ ── */
+.faq details{background:rgba(30,18,9,.74);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin-bottom:10px}
+.faq summary{cursor:pointer;font-weight:700} .faq p{color:var(--muted);margin:10px 0 0}
+
+/* ── Contacto / Footer ── */
+.footer-cta{background:linear-gradient(180deg,rgba(200,115,31,.09),transparent);border-top:1px solid rgba(61,30,10,.6)}
+.footer-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;padding-bottom:28px;border-bottom:1px solid rgba(61,30,10,.4);margin-bottom:20px}
+footer{padding:30px 0 40px;color:var(--muted)}
+
+/* ── Hamburger ── */
+.menu-toggle{display:none;background:none;border:none;color:var(--text);cursor:pointer;padding:8px;flex-direction:column;gap:5px;border-radius:8px}
+.menu-toggle span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:.25s}
+.menu-toggle.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.menu-toggle.open span:nth-child(2){opacity:0}
+.menu-toggle.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* ── Animaciones scroll ── */
+.fade-in{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.is-visible{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr 1fr}
+  .vinos-grid{grid-template-columns:1fr}
+  .vinos-img img{min-height:280px}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery img.wide{grid-column:span 2}
+  .menu-toggle{display:flex}
+  nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(18,11,6,.97);padding:16px 20px;border-bottom:1px solid rgba(61,30,10,.8);gap:0;z-index:50}
+  nav.open{display:flex} nav a{padding:12px 0;border-bottom:1px solid rgba(61,30,10,.3);font-size:1rem;color:var(--muted)}
+  .footer-cols{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .hero{min-height:88vh}
+  .grid-2,.grid-3,.grid-4,.gallery{grid-template-columns:1fr}
+  .gallery img.wide{grid-column:span 1;height:240px}
+  .btn{width:100%} .hero-ctas{flex-direction:column}
+  .footer-cols{grid-template-columns:1fr;gap:20px}
+  .vinos-text{padding:28px 22px}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BarOrPub",
+  "name":"El Almacén",
+  "foundingDate":"1956",
+  "image":["fachada.webp","interior.webp","vino.webp"],
+  "address":{"@type":"PostalAddress","streetAddress":"Calle Begoña, 12","addressLocality":"Gijón","addressRegion":"Asturias","postalCode":"33201","addressCountry":"ES"},
+  "telephone":"+34 984 182575",
+  "servesCuisine":["Cocina casera","Asturiana"],
+  "priceRange":"€-€€",
+  "sameAs":["https://www.instagram.com/elalmacengijon/"],
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Tuesday","Wednesday"],"opens":"12:30","closes":"16:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Tuesday","Wednesday"],"opens":"18:30","closes":"23:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"12:30","closes":"02:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"12:30","closes":"16:00"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap top">
+    <div class="brand-text">
+      <span class="name">EL ALMACÉN</span>
+      <span class="year">Est. 1956 · Gijón</span>
+    </div>
+    <nav id="mainNav">
+      <a href="#sobre">Sobre</a>
+      <a href="#vinos">Vinos</a>
+      <a href="#propuesta">Qué ofrecemos</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    <a class="btn" href="tel:+34984182575">984 182 575</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-bg" src="fachada.webp" alt="Exterior de El Almacén, Calle Begoña 12, Gijón" loading="eager">
+    <div class="hero-overlay"></div>
+    <div class="wrap hero-inner">
+      <div class="est-tag">Est. 1956 · Gijón</div>
+      <h1>Desde 1956,<br>el lugar de siempre.</h1>
+      <p class="lead">Vinos de pequeños productores, cervezas naturales, destilados de todo el mundo y cocina como la de casa. En el corazón de Gijón, en Calle Begoña, desde hace casi 70 años.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="tel:+34984182575">&#128222;&nbsp; 984 182 575</a>
+        <a class="btn alt" href="#vinos">Ver selección de vinos</a>
+      </div>
+      <div class="hero-pills">
+        <div class="pill">Calle Begoña 12, Gijón</div>
+        <div class="pill">Vinos artesanales</div>
+        <div class="pill">Cervezas naturales</div>
+        <div class="pill">Café Illy</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="wrap grid-2">
+      <div class="card tall">
+        <img src="interior.webp" alt="Interior del bar El Almacén con paredes de ladrillo visto, Gijón" loading="lazy">
+      </div>
+      <div class="card pad">
+        <span class="kicker">Nuestra historia</span>
+        <h2>Casi 70 años en el corazón de Gijón.</h2>
+        <p class="sub">El Almacén abrió en 1956 y desde entonces se ha convertido en uno de los bares con más carácter del centro de Gijón.</p>
+        <p style="color:var(--muted);line-height:1.75;">Ladrillo visto, madera y una barra donde siempre hay algo interesante que descubrir. Un sitio que no sigue modas porque no las necesita: la gente vuelve por el producto, por la atención y por ese ambiente que no se fabrica, se construye con los años.</p>
+        <p style="color:var(--muted);line-height:1.75;margin-top:12px;">Vinos de pequeños productores que no encuentras en todos lados, cervezas naturales, destilados seleccionados de todo el mundo y una cocina directa y sin trampa.</p>
+        <div style="margin-top:24px;padding:18px;border:1px solid rgba(200,115,31,.25);border-radius:14px;background:rgba(200,115,31,.07);">
+          <span style="font-family:Georgia,serif;font-size:1.08rem;color:var(--accent2);font-style:italic;">"Comida como la de casa, bebida como la que buscas."</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VINOS HIGHLIGHT -->
+  <section id="vinos">
+    <div class="wrap">
+      <div class="vinos-grid">
+        <div class="vinos-img">
+          <img src="dispensador-vinos.png" alt="Dispensador Enomatic con selección de vinos de pequeños productores en El Almacén, Gijón" loading="lazy">
+        </div>
+        <div class="vinos-text">
+          <span class="kicker">Nuestra especialidad</span>
+          <h2>Vinos de pequeños productores.</h2>
+          <p>En El Almacén no encontrarás las mismas botellas de siempre. Nuestra selección apuesta por bodegas independientes, productores artesanales y vinos con historia propia que merecen que les presentes.</p>
+          <p>Blancos, tintos, naturales, de guarda o para tomar ahora. Una carta que cambia con la temporada y que siempre tiene algo que no conocías.</p>
+          <div class="vino-tags">
+            <span class="vino-tag">Pequeños productores</span>
+            <span class="vino-tag">Vinos naturales</span>
+            <span class="vino-tag">Selección por copas</span>
+            <span class="vino-tag">Carta de temporada</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPUESTA -->
+  <section id="propuesta">
+    <div class="wrap">
+      <h2>Lo que encontrarás</h2>
+      <p class="sub">Una propuesta honesta y con criterio. Producto seleccionado, nada de atajos.</p>
+      <div class="grid-4">
+        <div class="p-card">
+          <span class="p-icon">🍷</span>
+          <h3>Vinos artesanales</h3>
+          <p>Selección de vinos de bodegas independientes y pequeños productores que no encontrarás en cualquier bar.</p>
+        </div>
+        <div class="p-card">
+          <span class="p-icon">🍺</span>
+          <h3>Cervezas naturales</h3>
+          <p>Cervezas artesanales y naturales con rotación de referencias para que siempre haya algo nuevo que probar.</p>
+        </div>
+        <div class="p-card">
+          <span class="p-icon">🥃</span>
+          <h3>Destilados del mundo</h3>
+          <p>Una barra con destilados de todo el mundo: whiskies, rones, ginebras, mezcales y muchos más.</p>
+        </div>
+        <div class="p-card">
+          <span class="p-icon">🍽️</span>
+          <h3>Cocina casera</h3>
+          <p>Platos directos y sin trampa. Cachopo asturiano, pizzas, nachos y todo lo que hace falta para acompañar una buena copa.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:16px;">
+        <div class="p-card" style="display:inline-flex;align-items:center;gap:10px;padding:14px 28px;">
+          <span style="font-size:1.3rem;">☕</span>
+          <span style="color:var(--accent2);font-size:.95rem;font-family:Georgia,serif;">Café Illy — el mejor espresso del centro de Gijón</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section id="galeria">
+    <div class="wrap">
+      <h2>Galería</h2>
+      <p class="sub">El ambiente, la barra y lo que sale de la cocina.</p>
+      <div class="gallery">
+        <img src="copas-vino.webp" alt="Copas de vino en El Almacén, Gijón" loading="lazy">
+        <img src="interior-2.webp" alt="Barra de El Almacén" loading="lazy">
+        <img src="logo.webp" alt="Cartel de El Almacén, Est. 1956" loading="lazy">
+        <img src="cachopo.webp" alt="Cachopo asturiano" loading="lazy">
+        <img src="pizza.webp" alt="Pizza artesanal" loading="lazy">
+        <img src="nachos.webp" alt="Nachos con queso gratinado" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="wrap">
+      <h2>Preguntas frecuentes</h2>
+      <details><summary>¿Dónde estáis?</summary><p>En Calle Begoña, 12, en el centro de Gijón, Asturias (CP 33201). A un paso de todo.</p></details>
+      <details><summary>¿Cómo puedo contactar?</summary><p>Llámanos al 984 182 575 o escríbenos por Instagram @elalmacengijon.</p></details>
+      <details><summary>¿Qué tipo de vinos tenéis?</summary><p>Selección de vinos de pequeños productores y bodegas independientes. La carta rota con las temporadas para tener siempre algo nuevo que descubrir.</p></details>
+      <details><summary>¿Tenéis comida?</summary><p>Sí, cocina casera y directa: cachopo asturiano, pizzas, nachos y más. Comida para acompañar la bebida, sin complicaciones.</p></details>
+      <details><summary>¿Cuál es vuestro horario?</summary><p>Jueves, martes y miércoles: 12:30–16:00 y 18:30–23:30. Viernes y sábado: 12:30–2:00. Domingo: 12:30–16:00. Lunes: cerrado.</p></details>
+      <details><summary>¿Facilitáis información sobre alérgenos?</summary><p>Sí. Conforme al Reglamento UE 1169/2011 podemos informarte sobre los alérgenos de cada plato. Consúltanos directamente en el local o por teléfono.</p></details>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="footer-cta">
+    <div class="wrap grid-2">
+      <div class="card" style="overflow:hidden;position:relative;min-height:340px;">
+        <img src="ubicacion.webp" alt="Ubicación de El Almacén en Gijón" style="width:100%;height:100%;object-fit:cover;min-height:340px;" loading="lazy">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 18px;background:linear-gradient(transparent,rgba(18,11,6,.95));">
+          <a href="https://www.google.com/maps/search/El+Almacén+Calle+Begoña+12+Gijón" target="_blank" rel="noopener" style="color:var(--accent2);font-size:.92rem;display:inline-flex;align-items:center;gap:6px;">&#128205; Cómo llegar · Ver en Google Maps →</a>
+        </div>
+      </div>
+      <div class="card pad">
+        <h2>Encuéntranos</h2>
+        <p>Estamos en el centro de Gijón, fácil de llegar y fácil de repetir.</p>
+        <p><strong>Dirección</strong><br>Calle Begoña, 12<br>33201 Gijón, Asturias</p>
+        <p><strong>Teléfono</strong><br><a href="tel:+34984182575" style="color:var(--accent2);">984 182 575</a></p>
+        <p style="margin-bottom:8px;"><strong>Horario</strong></p>
+        <table style="border-collapse:collapse;width:100%;font-size:.88rem;color:var(--muted);line-height:1.7;">
+          <tr><td style="padding:3px 0;width:48%;">Martes – Jueves</td><td>12:30–16:00 · 18:30–23:30</td></tr>
+          <tr><td style="padding:3px 0;">Viernes – Sábado</td><td>12:30–2:00</td></tr>
+          <tr><td style="padding:3px 0;">Domingo</td><td>12:30–16:00</td></tr>
+          <tr><td style="padding:3px 0;color:#7a4a2a;font-style:italic;">Lunes</td><td style="color:#7a4a2a;font-style:italic;">Cerrado</td></tr>
+        </table>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;">
+          <a class="btn" href="tel:+34984182575">Llamar ahora</a>
+          <a class="btn alt" href="https://www.instagram.com/elalmacengijon/" target="_blank" rel="noopener">&#128247; @elalmacengijon</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-cols">
+      <div>
+        <div style="margin-bottom:12px;">
+          <div style="font-family:Georgia,serif;font-size:1.1rem;letter-spacing:.14em;color:var(--text);">EL ALMACÉN</div>
+          <div style="font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-top:3px;">Est. 1956 · Gijón</div>
+        </div>
+        <p style="color:var(--muted);font-size:.87rem;margin:0;max-width:22ch;">Vinos, cervezas, destilados y cocina casera en el centro de Gijón desde 1956.</p>
+      </div>
+      <div>
+        <strong style="display:block;margin-bottom:10px;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);">Contacto</strong>
+        <p style="margin:0 0 5px;"><a href="tel:+34984182575" style="color:var(--muted);font-size:.9rem;">984 182 575</a></p>
+        <p style="margin:0;color:var(--muted);font-size:.9rem;">Calle Begoña, 12<br>33201 Gijón, Asturias</p>
+      </div>
+      <div>
+        <strong style="display:block;margin-bottom:10px;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);">Horario</strong>
+        <p style="margin:0 0 3px;color:var(--muted);font-size:.88rem;">Mar–Jue: 12:30–16:00 · 18:30–23:30</p>
+        <p style="margin:0 0 3px;color:var(--muted);font-size:.88rem;">Vie–Sáb: 12:30–2:00</p>
+        <p style="margin:0 0 10px;color:var(--muted);font-size:.88rem;">Dom: 12:30–16:00 · Lun: cerrado</p>
+        <a href="https://www.instagram.com/elalmacengijon/" target="_blank" rel="noopener" style="color:var(--accent2);font-size:.9rem;display:inline-flex;align-items:center;gap:6px;">&#128247; @elalmacengijon</a>
+      </div>
+    </div>
+    <p style="margin:0;font-size:.82rem;text-align:center;">© 2026 El Almacén · Gijón, Asturias · Est. 1956</p>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('menuToggle');
+  var nav = document.getElementById('mainNav');
+  toggle.addEventListener('click', function() {
+    toggle.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+  nav.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      toggle.classList.remove('open');
+      nav.classList.remove('open');
+    });
+  });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, {threshold: 0.1, rootMargin: '0px 0px -40px 0px'});
+    document.querySelectorAll('.grid-2, .grid-3, .grid-4').forEach(function(grid) {
+      Array.from(grid.children).forEach(function(c, i) { c.style.transitionDelay = (i * 0.1) + 's'; });
+    });
+    document.querySelectorAll('.card, .gallery img, .p-card, .faq details, .vinos-grid').forEach(function(el) {
+      el.classList.add('fade-in'); io.observe(el);
+    });
+  }
+</script>
+</body>
+</html>
